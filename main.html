@@ -3,7 +3,18 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+	<!-- <link rel="stylesheet" href="styles.css"> -->
+	<!-- <script type="text/javascript" src="./script.js"> -->
+		<script>
+		function showDetails(shopping) {
+  var shoppingType = shopping.getAttribute("data-shopping-type");
+  alert("The " + shopping.innerHTML + " is a " + shoppingType + ".");
+}
+function showDetail(holiday) {
+var holidayType = holiday.getAttribute("data-holiday-type");
+  alert("The " + holiday.innerHTML + " is a " + holidayType + ".");
+}
+</script>
 </head>
 
 <body>
@@ -16,22 +27,17 @@
 	</ol>
 	
 	<ul>
-		<li onclick="showDetails(this)" id="Paris" data-holiday-type="holidayList">Paris</li>
-		<li onclick="showDetails(this)" id="Iceland" data-holiday-type="holidayList">Iceland</li>  
-		<li onclick="showDetails(this)" id="New York" data-holiday-type="holidayList">New York</li>  
+		<li onclick="showDetail(this)" id="Paris" data-holiday-type="holidayList">Paris</li>
+		<li onclick="showDetail(this)" id="Iceland" data-holiday-type="holidayList">Iceland</li>  
+		<li onclick="showDetail(this)" id="New York" data-holiday-type="holidayList">New York</li>  
 	  </ul>
 
-    <script type="text/javascript" src="./script.js">
-		function showDetails(shopping) {
-  var shoppingType = shopping.getAttribute("data-shopping-type");
-  alert("The " + shopping.innerHTML + " is a " + shoppingType + ".");
-}
-function showDetails(holiday) {
-var holidayType = holiday.getAttribute("data-holiday-type");
-  alert("The " + holiday.innerHTML + " is a " + holidayType + ".");
-}
-</script>
+    
 
 </body>
 
 </html>
+
+<!DOCTYPE html>
+
+<html>
