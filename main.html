@@ -10,20 +10,26 @@
 	<!-- the entire body must be written by student -->
 	
 	<ol>
-		<p>shoppingList</p> 
-		<li> BMW </li>
-		<li> Private Jet</li>
-		<li> Villa</li>
+		<li onclick="showDetails(this)" id="BMW" data-shopping-type="shoppingList"> BMW </li>
+		<li onclick="showDetails(this)" id="Private Jet" data-shopping-type="shoppingList"> Private Jet </li>
+		<li onclick="showDetails(this)" id="Villa" data-shopping-type="shoppingList"> Villa </li>
 	</ol>
 	
 	<ul>
-		<p>holidayList</p>
-		<li> Paris</li>
-		<li> Iceland</li>
-		<li> New York</li>
-	</ul>
+		<li onclick="showDetails(this)" id="Paris" data-holiday-type="holidayList">Paris</li>
+		<li onclick="showDetails(this)" id="Iceland" data-holiday-type="holidayList">Iceland</li>  
+		<li onclick="showDetails(this)" id="New York" data-holiday-type="holidayList">New York</li>  
+	  </ul>
 
     <script type="text/javascript" src="./script.js">
+		function showDetails(shopping) {
+  var shoppingType = shopping.getAttribute("data-shopping-type");
+  alert("The " + shopping.innerHTML + " is a " + shoppingType + ".");
+}
+function showDetails(holiday) {
+var holidayType = holiday.getAttribute("data-holiday-type");
+  alert("The " + holiday.innerHTML + " is a " + holidayType + ".");
+}
 </script>
 
 </body>
